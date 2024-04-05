@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="ajuru.png" type="image/x-icon">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+     -->
+</head>
+
+<body>
+
+    <div class="navbar-logo">
+        <img id="ajuru" src="ajuru.png" alt="logo" class="logo">
+        <img id="passportPreview" src="placeholder.png" alt="Passport Preview" class="logo">
+    </div>
+    <!-- <input type="file" name="Passport" id="passport" accept="image/*" onchange="previewPassport(event)" required> -->
+
+    <div class="container">
+        <h2 class="student-title">Please Fill In Your Details</h2>
+        <div class="form">
+            <form action="/submit" method="post" id="userForm" autocomplete="off">
+
+                <div class="signin">
+                    <div class="user-input-box" id="label">
+                        <input type="text" name="Surname" id="surname" placeholder="Surname" required
+                            style="text-transform: capitalize;">
+                        <input type="text" name="Firstname" id="firstName" placeholder="First Name" required
+                            style="text-transform: capitalize;">
+                        <input type="text" name="Othername" id="otherName" placeholder="Other Name"
+                            style="text-transform: capitalize;">
+                    </div>
+                    <div class="user-input-box" id="number">
+                        <!-- 36 states  -->
+                        <input name="Origin" list="datalistOptions" id="origin" placeholder="State of Origin"
+                            style="text-transform: capitalize;">
+                        <datalist id="datalistOptions">
+                            <option value="Abia">
+                            <option value="Adamawa">
+                            <option value="Akwa Ibom">
+                            <option value="Anambra">
+                            <option value="Bauchi">
+                            <option value="Bayelsa">
+                            <option value="Benue">
+                            <option value="Borno">
+                            <option value="Cross River">
+                            <option value="Delta">
+                            <option value="Ebonyi">
+                            <option value="Edo">
+                            <option value="Ekiti">
+                            <option value="Enugu">
+                            <option value="Gombe">
+                            <option value="Imo">
+                            <option value="Jigawa">
+                            <option value="Kaduna">
+                            <option value="Kano">
+                            <option value="Katsina">
+                            <option value="Kebii">
+                            <option value="Koji">
+                            <option value="Kwara">
+                            <option value="Lagos">
+                            <option value="Nasarawa">
+                            <option value="Niger">
+                            <option value="Ogun">
+                            <option value="Ondo">
+                            <option value="Osun">
+                            <option value="Oyo">
+                            <option value="Plateau">
+                            <option value="Rivers">
+                            <option value="Sokoto">
+                            <option value="Taraba">
+                            <option value="Yobe">
+                            <option value="Zamfara">
+                            <option value="FCT Abuja">
+                        </datalist>
+                        <input type="text" name="LGA" placeholder="LGA" required>
+                        <input type="text" name="Address" id="address" placeholder="Place of Residence" required
+                            style="text-transform: capitalize;" >
+                    </div>
+                    <div class="user-input-box">
+                        <label for="DOB">Date of Birth</label>
+                        <input type="date" name="DOB" placeholder="" required>
+                        <input type="tel" name="Phone number" id="phone" placeholder="Phone Number" required>
+                        <input type="email" name="email" id="email" placeholder="Valid Email Address" required>
+                    </div>
+                    <div class="user-input-box">
+                        <input type="text" name="Degree" id="programme" placeholder="First Degree/Diploma/Certificate"
+                            required>
+                        <input type="text" name="Year of Application" id="year" placeholder="Year of Application"
+                            required>
+                        <!-- <input type="file" name="Passport" id="passport" accept="image/*" required> -->
+
+                        <input type="file" name="Passport" id="passport" accept="image/*"
+                            onchange="previewPassport(event)" required>
+
+                    </div>
+                    <div class="gender-details-box">
+                        <span class="gender-title">Gender</span>
+                        <div class="gender-category" aria-checked="false">
+                            <input type="radio" name="gender" id="male" value="Male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="female" value="Female" required>
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="marital-status-box">
+                        <span class="marital-title">Marital Status</span>
+                        <div class="marital-category" aria-checked="false">
+                            <input type="radio" name="Marital Status" id="single" value="Single" required>
+                            <label for="single">Single</label>
+                            <input type="radio" name="Marital Status" id="married" value="Married" required>
+                            <label for="married">Married</label>
+                            <input type="radio" name="Marital Status" id="divorced" value="Divorced" required>
+                            <label for="divorced">Divorced</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agree" id="terms" aria-checked="false">
+                    <input type="radio" name="Terms" id="Agree" value="Agree" required>
+                    <label for="terms" style="font-size: 17px;">I declare that the information presented above by me are true and
+                        correct and that the Institute has the right to annul
+                        my admission if at any time, any of the information is found to be false.</label>
+                </div>
+
+                <div class="form-submit-btn">
+                    <input type="submit" value="Submit" id="submitButton">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div id="container">
+            <p>Contact us: 08097100151 or 08141994665 </p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <!-- -->
+
+</body>
+
+</html>

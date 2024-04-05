@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="shortcut icon" href="ajuru.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Admin Panel</div>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Form Submissions</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">View Submissions</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h1>Form Submissions</h1>
+            <!-- Search bar -->
+            <input type="text" id="searchInput" placeholder="Search...">
+            <!-- Table to display form submissions -->
+            <table id="submissionTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Surname</th>
+                        <th>First Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows populated with form submission data -->
+                </tbody>
+            </table>
+            <!-- Pagination -->
+            <div id="pagination"></div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
